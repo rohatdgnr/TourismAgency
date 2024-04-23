@@ -45,7 +45,7 @@ public class TypeManager {
 
     public boolean update (int hotelId, List<String> rightList){
         if(hotelId ==0 ){
-            Helper.showMsg(" ID bulunamadı");
+            Helper.showMsg(" ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.typeDao.update(hotelId,rightList);
@@ -55,7 +55,7 @@ public class TypeManager {
     }
     public boolean deleteType(int hotelId,List<String> typeNames ){
         if(hotelId ==0 ){
-            Helper.showMsg(" ID bulunamadı");
+            Helper.showMsg(" ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.typeDao.deleteType(hotelId,typeNames);

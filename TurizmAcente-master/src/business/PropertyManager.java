@@ -61,7 +61,7 @@ public class PropertyManager {
 
     public boolean update(Property property) {
         if (this.getById(property.getPropertyID()) == null) {
-            Helper.showMsg(property.getPropertyID() + " ID bulunamadı");
+            Helper.showMsg(property.getPropertyID() + " ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.propertyDao.update(property);

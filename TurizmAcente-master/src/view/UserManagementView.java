@@ -46,7 +46,7 @@ public class UserManagementView extends Layout {
             // Alanlar boş mu diye kontrol et
             // Check if the fields are empty
             if (Helper.isFieldListEmpty(new JTextField[]{this.fld_mng_name, this.fld_mng_pass})) {
-                Helper.showMsg("fill"); // Alanları doldurunuz.
+                Helper.showMsg("fill");  //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             } else {
                 boolean result = false;
                 if (this.user != null) {
@@ -54,17 +54,16 @@ public class UserManagementView extends Layout {
                     this.user.setPassword(fld_mng_pass.getText());
                     this.user.setRole((User.Role) cmb_mng_role.getSelectedItem());
                     result = this.userManager.update(this.user);
-                    System.out.println("update kısmına gırdi");
                 } else {
                     //result=this.userManager.save(this.user);
                     User obj = new User(fld_mng_name.getText(), fld_mng_pass.getText(), (User.Role) cmb_mng_role.getSelectedItem());
                     result = this.userManager.save(obj);
                 }
                 if (result) {
-                    Helper.showMsg("done"); // İşlem tamamlandı.
+                    Helper.showMsg("done");  //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                     dispose();
                 } else {
-                    Helper.showMsg("error"); // Hata oluştu.
+                    Helper.showMsg("error");  //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
         });

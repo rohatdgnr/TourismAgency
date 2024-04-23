@@ -101,7 +101,6 @@ public class TypeDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("An error occurred while inserting new features: " + e.getMessage());
             return false; // Ekleme işlemi başarısız olduğunda false döndür
         }
         return true; // Ekleme işlemi başarılıysa true döndür
@@ -133,7 +132,7 @@ public class TypeDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("An error occurred while inserting new features: " + e.getMessage());
+
         }
         return true;
     }
@@ -162,11 +161,9 @@ public class TypeDao {
                     insertStatement.executeUpdate();
                 }
             }
-            System.out.println("Records deleted successfully.");
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Error occurred while deleting records.");
             return false;
         }
     }

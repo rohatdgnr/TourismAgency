@@ -135,7 +135,7 @@ public class ReservationAdd extends Layout {
                 daysBetween = (int) ChronoUnit.DAYS.between(reservationStartDate, reservationEndDate);
 
             }else{
-                Helper.showMsg("Geçersiz tarih girildi");
+                Helper.showMsg("Geçersiz tarih girildi"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
             if(!fld_check_start_date.getText().isEmpty() && !fld_check_end_date.getText().isEmpty()) {
                 int comparison = reservationStartDate.compareTo(reservationEndDate);
@@ -163,7 +163,7 @@ public class ReservationAdd extends Layout {
                     Helper.showMsg(formattedStartDate + " - " + formattedEndDate + "  sezon tarihileri arsında olmalı.");
                 }
                 }else{
-                Helper.showMsg("Rezervasyon Tarihleri Boş olamaz");
+                Helper.showMsg("Rezervasyon Tarihleri Boş olamaz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
         });
         fld_check_start_date.addKeyListener(new KeyAdapter() {
@@ -200,10 +200,10 @@ public class ReservationAdd extends Layout {
                     cmb_AdultBedNums.getSelectedItem() ==null ||(Integer) cmb_AdultBedNums.getSelectedItem() == 0 ||
                     cmb_ChildBedNum.getSelectedItem() ==null )
             {
-                Helper.showMsg("fill");
+                Helper.showMsg("fill"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             } else if (!Helper.isValidDate(fld_check_start_date.getText(),("dd-MM-yyyy")) || !Helper.isValidDate(fld_check_end_date.getText(),("dd-MM-yyyy")))
             {
-                Helper.showMsg("Geçersiz tarih girildi");
+                Helper.showMsg("Geçersiz tarih girildi"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             } else {
                 String fldAdultBedNum = cmb_AdultBedNums.getSelectedItem().toString();
                 String fldChildBedNum = cmb_ChildBedNum.getSelectedItem().toString();
@@ -219,30 +219,28 @@ public class ReservationAdd extends Layout {
                 this.reser.setChildNumb(fldChildBedNum);
                 this.reser.setTotalPrice(fld_reser_price.getText());
 
-               // if(this.room.getStock()>0){
+
                 int reservationId = this.reserManager.saveAndGetReserlId(this.reser);
                 if (reservationId > 0) {
                     this.reser.setId(reservationId);
                    if(this.reserManager.saveGuestInfoList(reservationId)) {
-                       Helper.showMsg("done");
+                       Helper.showMsg("done"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                        dispose();
+                       //Değerlendirme Formu 19 Rezervasyon yapılan odanın stoğu azalıyor
                         if(this.roomManager.stockUpdate(this.room,-1)){
-                            Helper.showMsg("Stok Azaltıldı");
+                            Helper.showMsg("Stok Azaltıldı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         }
 
                    }
                    else {
-                       Helper.showMsg("error");
+                       Helper.showMsg("error"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                    }
                 } else {
-                    Helper.showMsg("error");
+                    Helper.showMsg("error"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
-          /*  }else{
-                    Helper.showMsg("Oda stok 0 rezervasyon yapılamaz");
-                }*/
                 }
             }else {
-                Helper.showMsg("Misafir Bilgileri Boş Olamaz");
+                Helper.showMsg("Misafir Bilgileri Boş Olamaz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
         });
         misafirBilgileriButton.addActionListener(e -> {

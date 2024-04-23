@@ -101,7 +101,7 @@ public class HotelDao {
                     }
                 }
             } else {
-                Helper.showMsg("Bu e-posta ile daha önce kayıt yapılmış");
+                Helper.showMsg("Bu e-posta ile daha önce kayıt yapılmış"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

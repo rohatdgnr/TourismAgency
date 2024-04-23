@@ -30,6 +30,7 @@ public class Helper {
         String msg;
         String title;
         switch (str) {
+  //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             case "fill" -> {
                 msg = "Lütfen tüm alanları doldurunuz !";
                 title = "Hata!";

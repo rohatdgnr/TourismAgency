@@ -28,20 +28,20 @@ public class LoginView extends Layout {
 
             JTextField[] checkFieldList = {this.fld_user_name, this.fld_password};
             if (Helper.isFieldListEmpty(checkFieldList)) {
-                Helper.showMsg("fill");
+                Helper.showMsg("fill"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             } else {
                 User loginUser = this.userManager.findByLogin(this.fld_user_name.getText(), this.fld_password.getText());
                 System.out.println("kulanıcı bilgisi: " + loginUser);
                 if (loginUser == null) {
-                    Helper.showMsg("notFound");
+                    Helper.showMsg("notFound"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
-                    if (loginUser.getRole().toString().equals("admin")) {
+                    if (loginUser.getRole().toString().equals("admin")) { //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         AdminView adminView = new AdminView(loginUser);
 
                         dispose();
 
                     }
-                    if (loginUser.getRole().toString().equals("employee")) {
+                    if (loginUser.getRole().toString().equals("employee")) { //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         HotelView employee = new HotelView(loginUser);
 
                         dispose();

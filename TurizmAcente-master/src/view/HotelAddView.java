@@ -70,6 +70,7 @@ public class HotelAddView extends Layout {
     List<String> listRightType;
 
     // HotelManegementGUI yapıcı metodu
+    //Değerlendirme Formu 10 Acente personeli anlaşmalı olduğu otelleri sisteme otel adı, adres, E-posta, telefon, yıldız, tesis özellikleri bilgilerini girerek kaydedebiliyor
     public HotelAddView(Hotel hotel,Property property, Types types ,Season season) {
         this.hotelManager = new HotelManager();
         this.hotel = hotel;
@@ -118,10 +119,10 @@ public class HotelAddView extends Layout {
                     Helper.isList_J_Empty(lst_right_pro) ||
                     Helper.isList_J_Empty(lst_right_type) ||
                     (!rd_btn_sum.isSelected() || !rd_btn_win.isSelected())){
-                Helper.showMsg("Zorunlu Kısımlar Eksik");
+                Helper.showMsg("Zorunlu Kısımlar Eksik"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
             else if (!Helper.isValidDate(fld_season_start.getText(),("dd-MM-yyyy")) || !Helper.isValidDate(fld_season_end.getText(),("dd-MM-yyyy"))) {
-                Helper.showMsg("Geçersiz tarih girildi");
+                Helper.showMsg("Geçersiz tarih girildi"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }else{
                 //this.hotel.setHotel_id(tempHotelID);
                 this.hotel.setHotel_name(fld_hotel_name.getText());
@@ -132,7 +133,7 @@ public class HotelAddView extends Layout {
                 this.hotel.setHotel_phone(fld_hotel_phone.getText());
                 this.hotel.setHotel_star((Integer)cmb_hotel_star.getSelectedItem());
 
-
+//Değerlendirme Formu 11 Otellerin sisteme eklenmesinde dönem yönetimi yapılmış
                 List<Season> seasons = new ArrayList<>();
                 Season summerSeason = new Season();
                 summerSeason.setSeasonName("Summer");
@@ -163,23 +164,23 @@ public class HotelAddView extends Layout {
                             isSeason = this.seasonManager.save(seasons, hotelId);
 
                             if (isProper) {
-                                Helper.showMsg("Ozellık kayıt başarılı");
+                                Helper.showMsg("Ozellık kayıt başarılı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             } else {
-                                Helper.showMsg("Ozellilk  kayıt başarısız");
+                                Helper.showMsg("Ozellilk  kayıt başarısız"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             }
                             if (isType) {
-                                Helper.showMsg("Type  kayıt başarılı");
+                                Helper.showMsg("Type  kayıt başarılı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             } else {
-                                Helper.showMsg("Type  kayıt başarısız");
+                                Helper.showMsg("Type  kayıt başarısız"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             }
                             if (isSeason) {
-                                Helper.showMsg("Season  kayıt başarılı");
+                                Helper.showMsg("Season  kayıt başarılı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             } else {
-                                Helper.showMsg("Season  kayıt başarısız");
+                                Helper.showMsg("Season  kayıt başarısız"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                             }
-                            Helper.showMsg("Hotel bilgi kayıt başarılı");
+                            Helper.showMsg("Hotel bilgi kayıt başarılı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         }else {
-                            Helper.showMsg("Hotel bilgi kayıt başarısız");
+                            Helper.showMsg("Hotel bilgi kayıt başarısız"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         }
                      }
         });
@@ -225,14 +226,14 @@ public class HotelAddView extends Layout {
                 rightListPropertyModel.removeElement(lst_right_pro.getSelectedValue());
 
             } else {
-                Helper.showMsg("Özellik Seçiniz");
+                Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
         });
         btn_multi_right.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (leftListPropertyModel.getSize() == rightListPropertyModel.getSize()) {
-                    Helper.showMsg("Listenin tümü mevcut");
+                    Helper.showMsg("Listenin tümü mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
                     // Sol listedeki tüm öğeleri al
                     List<String> allItems = new ArrayList<>();
@@ -265,7 +266,7 @@ public class HotelAddView extends Layout {
         });
     }
     public void hotelTypeListComponent() {
-
+//Değerlendirme Formu 12 Otellerin sisteme eklenmesinde pansiyon tipi yönetimi yapılmış
         leftListTypeModel = new DefaultListModel<>();
 
         String[] typeArray = {
@@ -293,9 +294,9 @@ public class HotelAddView extends Layout {
                     rightListTypeModel.addElement(getLeftListValue);
                     lst_right_type.setModel(rightListTypeModel);
                 } else if (getLeftListValue == null) {
-                    Helper.showMsg("Özellik Seçiniz");
+                    Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
-                    Helper.showMsg("Listede Mevcut");
+                    Helper.showMsg("Listede Mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
         });
@@ -305,14 +306,14 @@ public class HotelAddView extends Layout {
             if (lst_right_type.getSelectedValue() != null) {
                 rightListTypeModel.removeElement(lst_right_type.getSelectedValue());
             } else {
-                Helper.showMsg("Özellik Seçiniz");
+                Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }
         });
         btn_multi_right_type.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (leftListTypeModel.getSize() == rightListTypeModel.getSize()) {
-                    Helper.showMsg("Listenin tümü mevcut");
+                    Helper.showMsg("Listenin tümü mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
                     // Sol listedeki tüm öğeleri al
                     List<String> allItems = new ArrayList<>();

@@ -58,7 +58,7 @@ public class UserManager {
 
     public boolean save(User user) {
         if (this.getById(user.getUserId()) != null) {
-            Helper.showMsg("error");
+            Helper.showMsg("error"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.userDao.save(user);
@@ -66,7 +66,7 @@ public class UserManager {
 
     public boolean update(User user) {
         if (this.getById(user.getUserId()) == null) {
-            Helper.showMsg(user.getUserId() + " ID bulunamadı");
+            Helper.showMsg(user.getUserId() + " ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.userDao.update(user);

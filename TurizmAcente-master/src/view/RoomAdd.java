@@ -247,7 +247,7 @@ public class RoomAdd extends Layout {
     }
 
 
-
+  //Değerlendirme Formu 17 Misafir bilgisi, kalınacak gece sayısı ve oda fiyatına göre konaklamaya ait fiyat başarılı bir şekilde hesaplanıyor
     public int roomPriceCalcul(){
 
         // Hizmet tiplerini ve fiyatlarını tutacak Map oluşturma

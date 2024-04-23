@@ -162,7 +162,6 @@ public class ReserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("An error occurred while inserting new guest information: " + e.getMessage());
             return false; // Ekleme işlemi başarısız olduğunda false döndür
         }
         return true; // Ekleme işlemi başarılıysa true döndür

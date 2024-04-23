@@ -114,7 +114,7 @@ public class HotelUpdateView extends Layout {
                     this.fld_season_end
             };
             if (Helper.isFieldListEmpty(checkFieldList)) {
-                Helper.showMsg("Otel Bilgi Kısmı Eksik");
+                Helper.showMsg("Otel Bilgi Kısmı Eksik"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             }else{
 
                 this.hotel.setHotel_name(fld_hotel_name.getText());
@@ -140,7 +140,7 @@ public class HotelUpdateView extends Layout {
                         this.season.setSeason_end(LocalDate.parse(fld_season_end.getText(), DateTimeFormatter.ofPattern("dd-MM-yyyy")));
                         isSeason = this.seasonManager.update(this.season);
                     }else{
-                        Helper.showMsg("Geçersiz tarih girildi");
+                        Helper.showMsg("Geçersiz tarih girildi"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                     }
                     isHotel = this.hotelManager.update(this.hotel);
                     this.property.setPropertyNames(propertyNames);
@@ -148,6 +148,7 @@ public class HotelUpdateView extends Layout {
 
                     List<String> listRightType = Helper.getListFromJList(lst_right_type);
                     isType = this.typeManager.update(this.hotel.getHotel_id(),listRightType);
+ //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                     if (isHotel){
                         Helper.showMsg("Hotel bilgi güncelleme başarılı");
                     }else {
@@ -261,9 +262,9 @@ public class HotelUpdateView extends Layout {
                     rightListPropertyModel.addElement(getLeftListValue);
                     lst_right_pro.setModel(rightListPropertyModel);
                 } else if (getLeftListValue == null) {
-                    Helper.showMsg("Özellik Seçiniz");
+                    Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
-                    Helper.showMsg("Listede Mevcut");
+                    Helper.showMsg("Listede Mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
         });
@@ -275,7 +276,7 @@ public class HotelUpdateView extends Layout {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (leftListPropertyModel.getSize() == rightListPropertyModel.getSize()) {
-                    Helper.showMsg("Listenin tümü mevcut");
+                    Helper.showMsg("Listenin tümü mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
                     // Sol listedeki tüm öğeleri al
                     List<String> allItems = new ArrayList<>();
@@ -313,10 +314,10 @@ public class HotelUpdateView extends Layout {
                             rightListPropertyModel.removeElement(selectedValue);
                         }
                     } else {
-                        Helper.showMsg("Tüm özellikleri silemezsiniz. En az bir özellik olmalı.");
+                        Helper.showMsg("Tüm özellikleri silemezsiniz. En az bir özellik olmalı."); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                     }
                 } else {
-                    Helper.showMsg("Özellik Seçiniz");
+                    Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
 
@@ -351,9 +352,9 @@ public class HotelUpdateView extends Layout {
                     rightListTypeModel.addElement(getLeftListValue);
                     lst_right_type.setModel(rightListTypeModel);
                 } else if (getLeftListValue == null) {
-                    Helper.showMsg("Özellik Seçiniz");
+                    Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
-                    Helper.showMsg("Listede Mevcut");
+                    Helper.showMsg("Listede Mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
         });
@@ -362,7 +363,7 @@ public class HotelUpdateView extends Layout {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (leftListTypeModel.getSize() == rightListTypeModel.getSize()) {
-                    Helper.showMsg("Listenin tümü mevcut");
+                    Helper.showMsg("Listenin tümü mevcut"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 } else {
                     // Sol listedeki tüm öğeleri al
                     List<String> allItems = new ArrayList<>();
@@ -403,10 +404,10 @@ public class HotelUpdateView extends Layout {
                         }
                             deletTypelistMetot(selectedValues);
                     } else {
-                        Helper.showMsg("Tüm özellikleri silemezsiniz. En az bir özellik olmalı.");
+                        Helper.showMsg("Tüm özellikleri silemezsiniz. En az bir özellik olmalı."); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                     }
                 } else {
-                    Helper.showMsg("Özellik Seçiniz");
+                    Helper.showMsg("Özellik Seçiniz"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
 
@@ -422,9 +423,9 @@ public class HotelUpdateView extends Layout {
 
         listRightType=Helper.convertObjectListToStringList(selectedValues);
         if (this.typeManager.deleteType(hotel.getHotel_id(), listRightType)) {
-            Helper.showMsg("done");
+            Helper.showMsg("done"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
         } else {
-            Helper.showMsg("error");
+            Helper.showMsg("error"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
         }
     }
 

@@ -60,12 +60,12 @@ public class RevervationUpdateView extends  Layout{
                 if(this.reser.getId() != 0) {
                     boolean isUpdate = (this.reserManager.update(this.reser));
                     if (isUpdate) {
-                        Helper.showMsg("done");
+                        Helper.showMsg("done"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                         dispose();
                     }
-                    else{Helper.showMsg("error");}
+                    else{Helper.showMsg("error");} //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }else{
-                    Helper.showMsg("ID bulunamadı");
+                    Helper.showMsg("ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
         });

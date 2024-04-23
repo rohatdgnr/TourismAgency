@@ -112,14 +112,14 @@ public class AdminView extends Layout {
             });
         });
         this.user_Menu.add("Sil").addActionListener(e -> {
-            if (Helper.confirm("sure")) {
+            if (Helper.confirm("sure")) { //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 int selectBrandId = this.getTableSelectedRow(tbl_user, 0);
                 if (this.userManager.delete(selectBrandId)) {
-                    Helper.showMsg("done");
+                    Helper.showMsg("done"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
 
                     loadRoleTable(null);
                 } else {
-                    Helper.showMsg("error");
+                    Helper.showMsg("error"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
                 }
             }
 

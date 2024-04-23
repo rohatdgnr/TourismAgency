@@ -28,7 +28,7 @@ public class ReserManager {
     }
     public boolean update(Reser reser) {
         if (this.getById(reser.getId()) == null) {
-            Helper.showMsg(reser.getId() + " ID bulunamadı");
+            Helper.showMsg(reser.getId() + " ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.reserDao.update(reser);
@@ -36,7 +36,7 @@ public class ReserManager {
     public boolean delete(int id ){
 
         if(this.getById(id)==null){
-            Helper.showMsg(id+" ID kayıtlı model bulunamadı");
+            Helper.showMsg(id+" ID kayıtlı model bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.reserDao.delete(id);

@@ -132,7 +132,6 @@ public class SeasonDao {
           }
       } catch (SQLException e) {
           e.printStackTrace();
-          System.out.println("An error occurred while inserting new seasons: " + e.getMessage());
           success = false;
       }
 

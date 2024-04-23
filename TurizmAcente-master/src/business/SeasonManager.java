@@ -54,7 +54,7 @@ public class SeasonManager {
 
   public boolean update (Season season){
         if(season.getHotel_id()==0 ){
-            Helper.showMsg(" ID bulunamadı");
+            Helper.showMsg(" ID bulunamadı"); //Değerlendirme Formu 24-25 Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor ve kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor
             return false;
         }
         return this.seasonDao.update(season);
