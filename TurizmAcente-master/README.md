@@ -26,6 +26,9 @@ Proje Yapısı
 
 - views: Kullanıcı arayüzünü oluşturan Swing GUI sınıfları
 
+Projenin videoya alınmış hali aşağıdaki linkte mevcuttur.
+
+https://www.youtube.com/watch?v=RrVL1pAHLcM&t=4s
 
 Proje ile ilgili görseller :
 
