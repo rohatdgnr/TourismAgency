@@ -1,1 +1,1 @@
-Turizm Acente Sistemi projesine dair tüm içerikleri içeriyor.
+Turizm Acente Sistemi projesine dair tüm dosyaları içeriyor.
