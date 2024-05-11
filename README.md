@@ -34,18 +34,18 @@ Giriş Ekranı
 
 Admin Kullanıcısının Ekranı :
 
-img_1.png
+<img src ="img.png"/>img_1.png
 
 Employee(Çalışan) Kullanıcısın Ekranları :
 
-img_2.png
+<img src ="img_2.png"/>
 
-img_3.png
+<img src ="img_3.png"/>
 
-img_4.png
+<img src ="img_4.png"/>
 
-img_5.png
+<img src ="img_5.png"/>
 
-img_6.png
+<img src ="img_6.png"/>
 
-img_7.png
+<img src ="img_7.png"/>
