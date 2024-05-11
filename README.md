@@ -30,7 +30,7 @@ Proje ile ilgili görseller :
 
 Giriş Ekranı
 
-img.png
+<img src ="img.png"/>
 
 Admin Kullanıcısının Ekranı :
 
