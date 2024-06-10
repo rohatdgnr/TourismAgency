@@ -1,42 +1,50 @@
-#Patika Turizm Acentesi Turizm Acente Sistemi Bu proje, Patika Turizm Acentesi'nin günlük operasyonlarını dijital bir platforma taşımak için geliştirilmiş bir yazılım çözümüdür. Bu yazılım, otel yönetimi, oda yönetimi, dönem yönetimi, fiyat yönetimi, oda arama ve rezervasyon işlemleri gibi bir dizi özelliği içermektedir.
+# Patika Turizm Acentesi Turizm Acente Sistemi
 
-Kullanılan Teknolojiler
+Bu proje, Patika Turizm Acentesi'nin günlük operasyonlarını dijital bir platforma taşımak için geliştirilmiş bir yazılım çözümüdür. Bu yazılım, otel yönetimi, oda yönetimi, dönem yönetimi, fiyat yönetimi, oda arama ve rezervasyon işlemleri gibi bir dizi özelliği içermektedir.
 
-Java
-Java Swing (GUI)
-PostgreSQL
-Kurulum
+# Kullanılan Teknolojiler
 
-Bu projeyi klonlayın.
-PostgreSQL veritabanında turizmacentesistemi adında bir veritabanı oluşturun.
-turizmacentesistemi.sql dosyasını kullanarak veritabanı tablolarını oluşturun. Veritabanı bağlantısını yapılandırmak için DatabaseConnection.java dosyasını düzenleyin.
-Proje Yapısı
+- Java
+- Java Swing (GUI)
+- PostgreSQL
 
-business: İş mantığını gerçekleştiren servis sınıfları
+ 
+ # Kurulum
 
-core: Dizini altında veritabanı oluşturma dosyası, bulunmaktadır.
+- Bu projeyi klonlayın.
+- PostgreSQL veritabanında turizmacentesistemi adında bir veritabanı oluşturun.
+- turizmacentesistemi.sql dosyasını kullanarak veritabanı tablolarını oluşturun. Veritabanı bağlantısını yapılandırmak için DatabaseConnection.java dosyasını düzenleyin.
 
-dao: Veritabanı işlemlerini gerçekleştiren DAO (Data Access Object) sınıfları
+  
+# Proje Yapısı
 
-entity: Veritabanı tablolarını temsil eden model sınıfları
+- business: İş mantığını gerçekleştiren servis sınıfları
 
-views: Kullanıcı arayüzünü oluşturan Swing GUI sınıfları
+- core: Dizini altında veritabanı oluşturma dosyası, bulunmaktadır.
 
-Projenin videoya alınmış hali aşağıdaki linkte mevcuttur.
+- dao: Veritabanı işlemlerini gerçekleştiren DAO (Data Access Object) sınıfları
 
-https://www.youtube.com/watch?v=RrVL1pAHLcM&t=4s
+- entity: Veritabanı tablolarını temsil eden model sınıfları
 
-Proje ile ilgili görseller :
+- views: Kullanıcı arayüzünü oluşturan Swing GUI sınıfları
 
-Giriş Ekranı
+
+# Projenin videoya alınmış hali aşağıdaki linkte mevcuttur.
+
+- https://www.youtube.com/watch?v=RrVL1pAHLcM&t=4s
+
+
+# Proje ile ilgili görseller :
+
+- Giriş Ekranı
 
 <img src ="img.png"/>
 
-Admin Kullanıcısının Ekranı :
+- Admin Kullanıcısının Ekranı :
 
 <img src ="img_1.png"/>
 
-Employee(Çalışan) Kullanıcısın Ekranları :
+- Employee(Çalışan) Kullanıcısın Ekranları :
 
 <img src ="img_2.png"/>
 
