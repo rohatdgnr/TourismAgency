@@ -4,8 +4,7 @@
 
 # Patika Turizm Acentesi Turizm Acente Sistemi
 
-Bu proje, Patika Turizm Acentesi'nin günlük operasyonlarını dijital bir platforma taşımak için geliştirilmiş bir yazılım çözümüdür. Bu yazılım, otel yönetimi, oda yönetimi, dönem yönetimi, fiyat yönetimi, oda arama ve rezervasyon işlemleri gibi bir dizi özelliği içermektedir..
-
+Bu proje, Patika Turizm Acentesi'nin günlük operasyonlarını dijital bir platforma taşımak için geliştirilmiş bir yazılım çözümüdür. Bu yazılım, otel yönetimi, oda yönetimi, dönem yönetimi, fiyat yönetimi, oda arama ve rezervasyon işlemleri gibi bir dizi özelliği içermektedir.
 # Kullanılan Teknolojiler
 
 - Java
